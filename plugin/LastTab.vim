@@ -10,7 +10,7 @@ if !exists('g:LastTab_History')
   let g:LastTab_History = [tabpagenr()]
 endif
 
-augroup Tabs
+augroup LastTab
   autocmd!
   autocmd TabEnter * call s:TabEnter()
   autocmd TabNew * call s:TabNew()
