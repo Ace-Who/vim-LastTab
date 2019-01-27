@@ -45,8 +45,9 @@ function! s:TabEnter() "{{{
   while i < len(g:Tabs_History)
     if g:Tabs_History[i] == tabpagenr()
       call remove(g:Tabs_History, i)
+    else
+      let i += 1
     endif
-    let i += 1
   endwhile
   call insert(g:Tabs_History, tabpagenr())
 endfunction "}}}
